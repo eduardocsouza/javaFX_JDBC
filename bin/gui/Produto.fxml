@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="550" prefWidth="400" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProdutoControll">
+   <children>
+      <Label text="Registrar Produto">
+         <VBox.margin>
+            <Insets left="6.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button fx:id="btn_add" mnemonicParsing="false" onAction="#onBtnAction" text="Adicionar Produto" />
+            <Button fx:id="btn_estq" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#fidAll" text="Total em Estoque" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="tableProduto" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="tableColumId" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="tableColumNome" prefWidth="75.0" text="Nome" />
+            <TableColumn fx:id="tableColumPreco" prefWidth="75.0" text="Preço" />
+            <TableColumn fx:id="tableColumQtd" prefWidth="75.0" text="Quantidade" />
+        </columns>
+      </TableView>
+      <HBox alignment="TOP_CENTER" prefHeight="45.0" prefWidth="400.0" spacing="10.0">
+         <children>
+            <Button fx:id="btn_edit" mnemonicParsing="false" onAction="#onBtnEdit" text="Editar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="3.5" left="15.0" right="15.0" top="3.5" />
+               </padding></Button>
+            <Button fx:id="btn_excluir" mnemonicParsing="false" onAction="#onBtnExcluir" text="Excluir">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <padding>
+                  <Insets bottom="3.5" left="15.0" right="15.0" top="3.5" />
+               </padding></Button>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
