@@ -22,8 +22,8 @@
       </Label>
       <ToolBar prefHeight="40.0" prefWidth="200.0">
         <items>
-          <Button fx:id="btn_add" mnemonicParsing="false" onAction="#onBtnAction" text="Adicionar Produto" />
-            <Button fx:id="btn_estq" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#fidAll" text="Total em Estoque" />
+          <Button fx:id="btn_add" lineSpacing="5.0" mnemonicParsing="false" onAction="#onBtnAction" text="Adicionar Produto" />
+            <Button fx:id="btn_estq" layoutX="10.0" layoutY="13.0" lineSpacing="5.0" mnemonicParsing="false" onAction="#fidAll" text="Total em Estoque" />
         </items>
       </ToolBar>
       <TableView fx:id="tableProduto" prefHeight="200.0" prefWidth="200.0">

@@ -10,17 +10,16 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane prefHeight="377.0" prefWidth="601.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<AnchorPane prefHeight="377.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.VendasController">
    <children>
       <SplitPane dividerPositions="0.38564273789649417" prefHeight="377.0" prefWidth="601.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TableView prefHeight="375.0" prefWidth="228.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tableVenda" prefHeight="375.0" prefWidth="228.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn prefWidth="115.0" text="Nome" />
-                      <TableColumn prefWidth="112.0" text="Preço" />
+                      <TableColumn fx:id="tableNome" prefWidth="115.0" text="Nome" />
+                      <TableColumn fx:id="tablePreco" prefWidth="112.0" text="Preço" />
                     </columns>
                   </TableView>
                </children>
@@ -45,11 +44,11 @@
                         <Label text="Valor Pago R$:" GridPane.rowIndex="3" />
                         <Label text="Nome:" />
                         <Label text="Troco R$:" GridPane.rowIndex="4" />
-                        <Label GridPane.columnIndex="1" />
-                        <TextField prefHeight="25.0" prefWidth="126.0" promptText="Digite a quantidade" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField promptText="Informe" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelN" GridPane.columnIndex="1" />
+                        <TextField fx:id="tQtd" prefHeight="25.0" prefWidth="126.0" promptText="Digite a quantidade" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="tValorPago" promptText="Informe" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="lableValor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="lableTroco" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                      </children>
                   </GridPane>
                </children>

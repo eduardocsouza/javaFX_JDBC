@@ -103,6 +103,10 @@ public class ViewController implements Initializable {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(view));
 			Pane p = loader.load();	
 			
+			VendasController controller = loader.getController();
+			controller.setProdutoService(new ProdutoService());
+			controller.updateList();
+			
 			telaInicial.getChildren().clear();
 			telaInicial.getChildren().setAll(p);			
 		}
