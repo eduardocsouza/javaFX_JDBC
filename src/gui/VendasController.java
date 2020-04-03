@@ -8,6 +8,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -45,6 +46,13 @@ public class VendasController implements Initializable{
 	@FXML
 	private Label lableTroco;
 	
+	@FXML
+	private Button btnCalc;
+	
+	@FXML
+	private Button btnVoltar;
+	
+	
 	private ObservableList<Produto> obsList;
 	
 	
@@ -72,6 +80,7 @@ public class VendasController implements Initializable{
 		}else {
 			labelN.setText(prod.getNome());
 			lableValor.setText(String.valueOf(prod.getPreco()));
+			lableTroco.setText("");
 		}
 	}
 
@@ -98,6 +107,29 @@ public class VendasController implements Initializable{
 			labelN.setText(prod.getNome());
 			lableValor.setText(String.valueOf(prod.getPreco()));
 		}
+	}
+	
+	public void getTroco() {
+		int qtd, n2, qtdDb = 0;
+		
+		Produto prod = tableVenda.getSelectionModel().getSelectedItem();
+		double n = prod.getPreco();
+	    qtd = Integer.parseInt(tQtd.getText());
+		double total = Double.parseDouble(tValorPago.getText()) - (qtd * n);
+		lableTroco.setText(String.format("%.2f", total));
+		tValorPago.setText("");
+		tQtd.setText("");
+		lableValor.setText("");
+		
+		n2 = prod.getQtd();
+		
+		qtdDb = n2 - qtd;
+		
+		prod.setQtd(qtdDb);
+			
+		service.insertProd(prod);
+		
+		
 	}
 
 }
