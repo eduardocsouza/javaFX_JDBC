@@ -12,16 +12,17 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="377.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.VendasController">
+<AnchorPane fx:id="telaVenda" prefHeight="377.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.VendasController">
    <children>
       <SplitPane dividerPositions="0.38564273789649417" prefHeight="377.0" prefWidth="601.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TableView fx:id="tableVenda" prefHeight="375.0" prefWidth="228.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="tableVenda" prefHeight="375.0" prefWidth="234.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="tableNome" prefWidth="115.0" text="Nome" />
-                      <TableColumn fx:id="tablePreco" prefWidth="112.0" text="Preço" />
+                        <TableColumn fx:id="tableCodigo" prefWidth="49.0" text="Código" />
+                      <TableColumn fx:id="tableNome" prefWidth="96.0" text="Nome" />
+                      <TableColumn fx:id="tablePreco" prefWidth="87.0" text="Preço" />
                     </columns>
                   </TableView>
                </children>
@@ -47,17 +48,18 @@
                         <Label text="Nome:" />
                         <Label text="Troco R$:" GridPane.rowIndex="4" />
                         <Label fx:id="labelN" GridPane.columnIndex="1" />
-                        <TextField fx:id="tQtd" prefHeight="25.0" prefWidth="126.0" promptText="Digite a quantidade" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="tValorPago" promptText="Informe" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <Label fx:id="lableValor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <Label fx:id="lableTroco" textFill="#ee0b0b" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font></Label>
+                        <TextField fx:id="tQtd" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                   <Button fx:id="btnCalc" layoutX="265.0" layoutY="291.0" mnemonicParsing="false" onAction="#getTroco" text="Calcular" />
-                  <Button fx:id="btnVoltar" layoutX="190.0" layoutY="291.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Voltar" />
+                  <Button fx:id="btnVoltar" layoutX="190.0" layoutY="291.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="58.0" text="Voltar" />
+                  <Button fx:id="vendasDia" layoutX="83.0" layoutY="291.0" mnemonicParsing="false" onAction="#vendaQtd" text="Vendas do dia" />
                </children>
             </AnchorPane>
         </items>

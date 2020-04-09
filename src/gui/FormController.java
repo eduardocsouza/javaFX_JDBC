@@ -48,7 +48,7 @@ public class FormController implements Initializable{
 	}
 		
 	public void onAddProd(ActionEvent event) {
-				
+		Produto prod = new Produto();		
 		prod.setNome(textNome.getText());
 		prod.setPreco(Double.parseDouble(textPreco.getText()));
 		prod.setQtd(Integer.parseInt(textQtd.getText()));

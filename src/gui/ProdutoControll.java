@@ -188,6 +188,7 @@ public class ProdutoControll implements Initializable {
 		List<Produto> list = prodServices.findAll();
 		obsProd = FXCollections.observableArrayList(list);
 		tableProduto.setItems(obsProd);
+		
 	}
 	
 	public void fidAll() {

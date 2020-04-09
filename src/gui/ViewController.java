@@ -107,6 +107,7 @@ public class ViewController implements Initializable {
 			controller.setProdutoService(new ProdutoService());
 			controller.updateList();
 			
+			
 			telaInicial.getChildren().clear();
 			telaInicial.getChildren().setAll(p);			
 		}
